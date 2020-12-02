@@ -1,3 +1,5 @@
+package constants.java;
+
 public class Constants {
 
     //定数（名前）
