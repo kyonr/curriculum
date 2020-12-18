@@ -11,11 +11,11 @@ public class Check {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-		String a = firstName;
-		String b = lastName;
-		String c = printName(a , b);
+//		String a = firstName;
+//		String b = lastName;
+//		String c = printName(firstName , lastName);
 
-		System.out.println("printNameメソッド → " + c);
+		System.out.println("printNameメソッド → " + printName(firstName , lastName));
 
 
 		  Pet dog = new Pet(Constants.CHECK_CLASS_JAVA , Constants.CHECK_CLASS_HOGE);
@@ -27,10 +27,9 @@ public class Check {
 
 	private static String printName(String firstName, String lastName) {
 		// TODO 自動生成されたメソッド・スタブ
-		String d = firstName + lastName;
-		return d;
+//		String d = firstName + lastName;
+		return  firstName + lastName;
 	}
-
 
 
 
