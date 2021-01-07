@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width: 100%;
+}
+
+.wrapper{
+  width: 350px;
+}
+
+.header{
+  height: 100px; 
+  width: 350px;
+}
+
+.header-left{
+  height: 100px; 
+  width: 150px;
+  background-color: #FFFF66;
+  float: left;
+}
+
+.header-right{
+  height: 100px; 
+  width: 200px;
+  background-color: #666666;
+  float:right;
+}
+
+.content{
+  height: 150px;
+  width: 350px;
+}
+
+.content-left{
+  height: 150px;
+  width: 150px;
+  background-color: #FF3333;
+  float:left;
+}
+
+.content-right{
+  height: 150px;
+  width: 200px;
+  float: right;
+}
+
+.content-right-left{
+  height: 150px;
+  width: 100px;
+  background-color: #3366FF;
+  float: left;
+}
+
+.content-right-right{
+  height: 150px;
+  width: 100px;
+  background-color: #669933;
+  float: right;
+}
+
+.footer{
+  height:100px;
+  width: 350px;
+}
+
+.footer-left{
+  height:100px;
+  width: 150px;
+  background-color: #FF9966;
+  float: left;
+}
+
+.footer-right{
+  height:100px;
+  width: 200px;
+  float:right;
+}
+
+.footer-right-left{
+  height:100px;
+  width: 100px;
+  background-color: #FFFFCC;
+  float: left;
+}
+
+.footer-right-right{
+  height:100px;
+  width: 100px;
+  background-color: #330066;
+  float: right;
+}
+
+
+.clearfix::after { 
+  content: '';
+  display: block; 
+  clear: both;
+}
