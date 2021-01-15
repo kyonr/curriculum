@@ -84,16 +84,15 @@ public class ExException {
   // 問①: 強制的に「NullPointerException」を発生させるメソッドを作成し、呼び出しなさい。
   // 問①は最下部にもあります。
   // ルール: ここへ作成したメソッドを呼び出す
-	 nullpointer(null);
+	 nullpointer();
  break;
  case CONST_EXCEPTION_TRIGER_ARRAY_OUT_OF_BOUNDS:
   // 問②: 「throw」を使用せずに「ArrayIndexOutOfBoundsException」を発生させる処理を記述しなさい。
   // Tips: ご自身で配列を準備してください（使用する配列の型、要素数は自由）
   // ここへ記述
 	 int array[] = {1, 2, 3, 4, 5};
-	 int i = 0;{
-	   System.out.println(array[9]);
-	 }
+	 System.out.println(array[9]);
+
  break;
  case CONST_EXCEPTION_TRIGER_CAST:
  String castedStrValue = (String) CONST_OBJ_FOR_CLASS_CAST;
@@ -136,12 +135,11 @@ public class ExException {
  * ルール2: 例外発生時に設定するメッセージは、定義済みの定数から適当なものを指定してください。
  */
   // ここへ記述
- private static void nullpointer(String str) throws NullPointerException {
+ private static void nullpointer() throws NullPointerException {
+	 throw new NullPointerException(CONST_MSG_NULLPO);
 
      // 指定ファイルが未存在の場合に例外発生
-     int i = str.length();
 
-     System.out.println(str + "は" + i + "文字");
  }
 
 
