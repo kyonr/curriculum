@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import service.EmployeeService;
+import bean.EmployeeBean;
 
 public class EmployeeController extends HttpServlet {
  public void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -21,8 +22,8 @@ public class EmployeeController extends HttpServlet {
 
  try {
   // 問① index.htmlから送信されたIDとPassWordの値を取得できるように修正しましょう。
- String id = request.getParameter("");
- String password = request.getParameter("");
+ String id = request.getParameter("id");
+ String password = request.getParameter("pass");
 
  /*
  * IDとPassWordと元に、社員情報を検索する関数の呼び出し、結果をJSPに渡す処理
@@ -30,13 +31,14 @@ public class EmployeeController extends HttpServlet {
  */
 
   // 問② EmployeeServiceクラスをインスタンス化する。
- EmployeeService.employeeService = new EmployeeService();
+ EmployeeService empSer = new EmployeeService();
 
   // 問③ EmployeeBeanに、EmployeeServiceよりsearch関数を呼び出し、返り値を格納する。
 
+	 EmployeeBean bean = empSer.search(id, password);
 
   // 問④ nullの部分に適切な引数をセットする。
- request.setAttribute("EmployeeBean", null);
+ request.setAttribute("EmployeeBean", bean);
 
  } catch (Exception e) {
  e.printStackTrace();
@@ -46,4 +48,6 @@ public class EmployeeController extends HttpServlet {
  dispatcher.forward(request, response);
  }
  }
+
+
 }
